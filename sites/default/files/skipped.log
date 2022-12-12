@@ -1,0 +1,20 @@
+Below is a list of files we were unable to include in this backup. These files
+are not missing, but were not available in our file-store cloud at the time the
+tarball was made or are not backed up because they can be generated. In almost
+all cases these will be resolved the next time you generate a backup or export.
+
+/styles/thumbnail/public/2021-05/universityvideo.png: Generated files are not backed up
+/styles/thumbnail/public/pictures/2021-05/UserImage.png: Generated files are not backed up
+/styles/medium/public/2021-05/10.png: Generated files are not backed up
+/styles/medium/public/2021-05/11.png: Generated files are not backed up
+/styles/medium/public/2021-05/12.png: Generated files are not backed up
+/styles/thumbnail/public/2021-05/hometestimonial.png: Generated files are not backed up
+/styles/thumbnail/public/2021-05/book.png: Generated files are not backed up
+/styles/thumbnail/public/2021-05/4.png: Generated files are not backed up
+/styles/thumbnail/public/2021-05/banner.jpg: Generated files are not backed up
+/styles/thumbnail/public/2021-05/3.png: Generated files are not backed up
+/styles/thumbnail/public/2021-05/homeblog.png: Generated files are not backed up
+
+If you need immediate access to the files listed here, or have questions about
+the state of your files, you can contact support via your Dashboard.
+
