@@ -1,0 +1,19 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function actualites_theme($existing, $type, $theme, $path) {
+	return array(
+		'news' => array(
+		'variables' => array(
+			'title' => '',
+			'items' => array(),
+			'description'=>'',
+			
+		  ),
+		  'path' => drupal_get_path('module', 'actualites') . '/templates/page',
+		),
+	);
+	
+}

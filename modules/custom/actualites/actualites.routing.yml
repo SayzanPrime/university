@@ -1,0 +1,7 @@
+actualites.get_actualites:
+  path: '/page/actualites'
+  defaults:
+    _controller: '\Drupal\actualites\Controller\actualitesController::get_actualites'
+    _title: 'Actualites'
+  requirements: 
+    _permission: 'access content'
