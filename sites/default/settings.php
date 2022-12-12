@@ -771,13 +771,20 @@ $config['system.logging']['error_level']='verbose';
 #   include $app_root . '/' . $site_path . '/settings.local.php';
 # }
 $databases['default']['default'] = array (
-  'database' => 'uni',
+  'database' => 'university',
   'username' => 'root',
   'password' => '',
-  'prefix' => '',
-  'host' => 'localhost',
-  'port' => '3306',
-  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
   'driver' => 'mysql',
+  'host' => 'localhost',
+  'port' => '3306'
 );
-$settings['config_sync_directory'] = 'sites/default/files/config_A5Bv9TMcQBRupVf_FhCFMUvG9DdUlzqeKQENwaU44Hm8aIGgZMXQyNJ1qBAe3eTOjl4Xtjl6Ug/sync';
+
+$config['system.logging']['error_level'] = 'verbose';
+
+error_reporting(E_ALL);
+ini_set('display_errors', TRUE);
+ini_set('display_startup_errors', TRUE);
+
+
+ini_set('memory_limit', '-1'); // unlimited memory limit
+ini_set('max_execution_time', 3000);
