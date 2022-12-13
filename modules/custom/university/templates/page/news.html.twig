@@ -1,31 +1,4 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Codespaces
-Marketplace
-Explore
- 
-@maryammary99 
-SayzanPrime
-/
-university
-Public
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-university/modules/custom/university/templates/page/news.html.twig
-@maryammary99
-maryammary99 secodn test
-Latest commit f359bf9 4 hours ago
- History
- 1 contributor
-178 lines (161 sloc)  6.38 KB
+
 
 {#
 /**
@@ -160,8 +133,9 @@ Latest commit f359bf9 4 hours ago
              <ul>      
 					{% for item in items %}
 					<a href="{{item.actu_url}}">{{item.titre}}</a>
-           <p>{{item.corps |striptags}}<p>
-          {{item.summary}}
+           
+            <p>{{item.summary}}</p>
+            <a href ="{{item.actu_url}}">Lire la suite</a>
              
             <div>
            <img src="{{item.url}}" />

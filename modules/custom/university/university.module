@@ -21,6 +21,16 @@ function university_theme($existing, $type, $theme, $path) {
 		  ),
 		  'path' => drupal_get_path('module', 'university') . '/templates/page',
 		),
+
+		'news' => array(
+		'variables' => array(
+			'title' => '',
+			'items' => array(),
+			'description'=>'',
+			
+		  ),
+		  'path' => drupal_get_path('module', 'actualites') . '/templates/page',
+		),
 	);
 	
 }

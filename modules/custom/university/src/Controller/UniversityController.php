@@ -87,4 +87,50 @@ class UniversityController extends ControllerBase
     
 	
 	}
+
+	public function get_actualites()
+    {
+		$title = t("Actualités");
+		$items = [];		
+        try {
+			// Load the content.
+			$nids = \Drupal::entityQuery('node')->condition('type','news')->execute();
+            $nodes = \Drupal\node\Entity\Node::loadMultiple($nids); 
+
+			$i=0;
+			foreach ($nodes as $content) {
+				
+			 $items[$i]['titre'] = $content->title->value;
+			 $items[$i]['summary'] = $content->get('body')->summary;
+			 
+			 
+
+			 $options = ['absolute' => TRUE];
+			 $actu_url = \Drupal\Core\Url::fromRoute('entity.node.canonical', ['node' => $content->nid->value], $options);
+			 $actu_url = $actu_url->toString();
+			 $items[$i]['actu_url'] = $actu_url;
+
+			 $uri = $content->field_icon->entity->getFileUri();
+				$url = file_create_url($uri);
+			  $items[$i]['url'] =$url;
+			   $i++;
+			}
+		}
+			
+			
+	
+
+         catch (RequestException $e) {
+            // log exception;
+        }
+
+        return array(
+            '#theme' => 'news',
+            '#title' => $title,
+            '#items' => $items,
+			
+        );
+    
+	
+	}
 }
