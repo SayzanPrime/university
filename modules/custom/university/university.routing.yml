@@ -13,3 +13,11 @@ university.get_marches_publique:
     _title: 'Marches publique'
   requirements: 
     _permission: 'access content'
+
+actualites.get_actualites:
+  path: '/page/actualites'
+  defaults:
+    _controller: '\Drupal\university\Controller\UniversityController::get_actualites'
+    _title: 'Actualites'
+  requirements: 
+    _permission: 'access content'

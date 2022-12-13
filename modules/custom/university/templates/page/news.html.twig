@@ -125,27 +125,34 @@
                 <section class="section">
                   <a id="main-content" tabindex="-1"></a>
                   <h1>{{title}}</h1>
-                     
-                <ul>  
-                 <div>
-                   <img src="coming_soon_bg.jpg"/>
-                 </div>    
-					       {% for item in items %}
-                   <li>
-                   <a href="{{item.file}}">{{item.titre}}</a>
-                   </li>     
-              
-                   {% for avis in item.avis %}
-                    <div>
-                     <label>{{avis.description}}:</label>
-                     <a href="{{avis.url}}">Cliquez Ici</a>
-                    </div>
-                   {% endfor %}
+                  
+                  {{ content.body['#items'][0].summary }} 
+                  
+            
+             <ul>      
+					{% for item in items %}
+					<a href="item.actu_url1">{{item.titre}}</a>
+           <p>{{item.corps |striptags}}<p>
+          {{item.summary}}
+             
+            <div>
+           <img src="{{item.url}}" />
+            </div>
+
+            <div>
+            <label>Date d'actualité:</label>
+            <p >{{item.date}}</p>
+            </div>
+            
        
-					      {% endfor %}
-				       </ul>
-              
+					{% endfor %}
+				  </ul>
+                
+               
+				
+				           
                 </section>
+
               </main>
             {% if page.sidebar_second %}
               <div{{ sidebar_second_attributes }}>
