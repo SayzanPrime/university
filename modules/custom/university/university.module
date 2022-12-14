@@ -28,8 +28,9 @@ function university_theme($existing, $type, $theme, $path) {
 			'items' => array(),
 			'description'=>'',
 			
+			
 		  ),
-		  'path' => drupal_get_path('module', 'actualites') . '/templates/page',
+		  'path' => drupal_get_path('module', 'university') . '/templates/page',
 		),
 	);
 	

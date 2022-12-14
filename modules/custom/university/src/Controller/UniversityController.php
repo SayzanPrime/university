@@ -94,8 +94,9 @@ class UniversityController extends ControllerBase
 		$items = [];		
         try {
 			// Load the content.
-			$nids = \Drupal::entityQuery('node')->condition('type','news')->execute();
+			$nids = \Drupal::entityQuery('node')->condition('type','news')->pager(5)->execute();
             $nodes = \Drupal\node\Entity\Node::loadMultiple($nids); 
+			
 
 			$i=0;
 			foreach ($nodes as $content) {
@@ -124,12 +125,19 @@ class UniversityController extends ControllerBase
             // log exception;
         }
 
-        return array(
-            '#theme' => 'news',
-            '#title' => $title,
-            '#items' => $items,
-			
-        );
+		$build['pager'] = [
+			'#theme' => 'news',
+			'#title'  => $title,
+			'#items' => $items,
+			'#pager' => [
+				'#type' => 'pager',
+			  ],
+		  ];
+		   
+         return $build;
+		
+
+	
     
 	
 	}
